@@ -1,8 +1,12 @@
-# Uppgift 9
-# Skapa en funktion is_palindrome(string) som kontrollerar om en given sträng är ett palindrom (dvs. samma framifrån och bakifrån).
 
-def funktions_namn(variabel_namn: datatyp) -> returtyp:
+def is_palindrome(string: str) -> bool:
     """
-    Skriv beskrivning här.
+    Kontrollerar om en given sträng är ett palindrom (samma framifrån och bakifrån).
     """
-    pass # Ta bort denna rad och skriv din kod här
+    return string == string[::-1]
+
+
+print(is_palindrome("radar"))    # Förväntat: True
+print(is_palindrome("python"))   # Förväntat: False
+print(is_palindrome(""))          # Förväntat: True
+print(is_palindrome("level"))    # Förväntat: True

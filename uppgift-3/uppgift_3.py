@@ -1,10 +1,18 @@
-# Uppgift 3
-# Hitta det största talet i en lista
+
 
 def max_in_list(numbers: list[int]) -> int:
     """
-    Skriv beskrivning här.
+    Returnerar det största talet i listan.
     """
-    return max(numbers)
+    if not numbers:
+        raise ValueError("Listan är tom")
+    
+    max_value = numbers[0]
+    for number in numbers[1:]:
+        if number > max_value:
+            max_value = number
+    return max_value
 
-print(max_in_list([1, 2, 3]))
+
+lista = [1, 3, 7, 2, 5]
+print(f"Det största talet är: {max_in_list(lista)}")
